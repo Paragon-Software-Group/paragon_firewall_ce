@@ -1,0 +1,36 @@
+// Paragon Firewall Community Edition
+// Copyright (C) 2019-2020  Paragon Software GmbH
+//
+// This file is part of Paragon Firewall Community Edition.
+//
+// Paragon Firewall Community Edition is free software: you can
+// redistribute it and/or modify it under the terms of the GNU General
+// Public License as published by the Free Software Foundation, either
+// version 3 of the License, or (at your option) any later version.
+//
+// Paragon Firewall Community Edition is distributed in the hope that it
+// will be useful, but WITHOUT ANY WARRANTY; without even the implied
+// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+// the GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Paragon Firewall Community Edition. If not, see
+//   <https://www.gnu.org/licenses/>.
+//
+// Created by Alexey Antipov on 19.09.2019.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+FIREWALL_VERSION = 0.1.7
+
+BUILD_NUMBER = 1xc
+
+XCARCHIVE_NAME = $(WRAPPER_NAME)-$(FIREWALL_VERSION)-$(BUILD_NUMBER)
+
+DEVELOPMENT_TEAM = LSJ6YVK468
+
+ORG_IDENTIFIER = com.paragon-software
+
+FIREWALL_APP_GROUP = $(TeamIdentifierPrefix)group.$(ORG_IDENTIFIER).app-group

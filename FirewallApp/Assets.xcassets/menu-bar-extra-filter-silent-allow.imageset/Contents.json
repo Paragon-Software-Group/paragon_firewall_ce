@@ -1,0 +1,40 @@
+{
+  "images" : [
+    {
+      "idiom" : "mac",
+      "filename" : "ParagonFirewall-tray-run-silentAllow.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "mac",
+      "filename" : "ParagonFirewall-tray-run-silentAllow_DARK.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "mac",
+      "filename" : "ParagonFirewall-tray-run-silentAllow@2x-1.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "mac",
+      "filename" : "ParagonFirewall-tray-run-silentAllow_DARK@2x.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

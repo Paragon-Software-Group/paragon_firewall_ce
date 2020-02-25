@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4005C17C2343886900378A28 /* libmcom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4005C1792343885400378A28 /* libmcom.a */; };
+		402D2BA5231E8CCA00FF3F8B /* SystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D2BA2231E8CCA00FF3F8B /* SystemExtensions.swift */; };
+		403944DA2333B3D600A8375E /* FastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403944D92333B3D600A8375E /* FastList.swift */; };
+		4039CFF82326A3E200170BAD /* ExtensionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039CFF72326A3E200170BAD /* ExtensionLoader.swift */; };
+		4039CFFC2326A71700170BAD /* LogWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039CFFB2326A71700170BAD /* LogWindowController.swift */; };
+		404AC03923A781C6002CD7E3 /* libUILib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 404AC03023A78148002CD7E3 /* libUILib.a */; };
+		405581362358644500BC9085 /* SelectableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405581352358644500BC9085 /* SelectableLabel.swift */; };
+		4078086A23155BFD00D47105 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4078086923155BFD00D47105 /* libc++.tbd */; };
+		407F2D4623472EDF00833C59 /* libNetworkFilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407F2D43234729FC00833C59 /* libNetworkFilter.a */; };
+		40BA6CB0240554A8002CFDEC /* libmach-cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4005C1772343885400378A28 /* libmach-cpp.a */; };
+		40E916B3232909800070856B /* MonitoredAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E916B0232909800070856B /* MonitoredAppModel.swift */; };
+		40E97011234349300085FE64 /* libMach.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E97006234346C50085FE64 /* libMach.a */; };
+		40FDA755234736C500493208 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F1E30A2313DF7D00DA4929 /* NetworkExtension.framework */; };
+		40FDA7602347394B00493208 /* com.paragon-software.FirewallApp.NetworkFilterExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 407F2D41234729FC00833C59 /* com.paragon-software.FirewallApp.NetworkFilterExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		40FDA76223473B7000493208 /* libNetworkFilterManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407F2D3F234729FC00833C59 /* libNetworkFilterManager.a */; };
+		6E1AA218230AE97C009C6806 /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1AA217230AE97C009C6806 /* DotsView.swift */; };
+		6E1ACC80230A886D00FADD61 /* ExtensionApprovalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1ACC7F230A886D00FADD61 /* ExtensionApprovalView.swift */; };
+		6E1ACC85230A88AF00FADD61 /* TourStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1ACC84230A88AF00FADD61 /* TourStartView.swift */; };
+		6E1ACC87230A895B00FADD61 /* TourAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1ACC86230A895B00FADD61 /* TourAboutView.swift */; };
+		6E1ACC89230A897000FADD61 /* TourModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1ACC88230A897000FADD61 /* TourModeView.swift */; };
+		6E1ACC8B230A89B500FADD61 /* TourControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1ACC8A230A89B500FADD61 /* TourControlsView.swift */; };
+		6E1ACC8D230A89CC00FADD61 /* TourDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1ACC8C230A89CC00FADD61 /* TourDoneView.swift */; };
+		6E230E9522E5A5B4006508FA /* MonitoredAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E230E9422E5A5B4006508FA /* MonitoredAppView.swift */; };
+		6E3306BD22D71C2F00F6A451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3306BC22D71C2F00F6A451 /* AppDelegate.swift */; };
+		6E3306BF22D71C2F00F6A451 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3306BE22D71C2F00F6A451 /* ContentView.swift */; };
+		6E3306C122D71C3200F6A451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3306C022D71C3200F6A451 /* Assets.xcassets */; };
+		6E3306C422D71C3200F6A451 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3306C322D71C3200F6A451 /* Preview Assets.xcassets */; };
+		6E3306C722D71C3200F6A451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3306C522D71C3200F6A451 /* Main.storyboard */; };
+		6E36EC8F2361A9BE00FD8503 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36EC8E2361A9BE00FD8503 /* IconView.swift */; };
+		6E38BB9122F42DFB009E7431 /* MonitoredAppBriefStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38BB9022F42DFA009E7431 /* MonitoredAppBriefStats.swift */; };
+		6E458D33230D78BE0009CAC7 /* TourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E458D32230D78BE0009CAC7 /* TourView.swift */; };
+		6E458D3C230D8D060009CAC7 /* TourSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E458D3B230D8D060009CAC7 /* TourSetupView.swift */; };
+		6E5322DC2310121D00130268 /* TourModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5322DB2310121D00130268 /* TourModeSelectionView.swift */; };
+		6E5322E12313DA7400130268 /* TourSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5322E02313DA7400130268 /* TourSectionHeader.swift */; };
+		6E5C24562341F4D1006D624A /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C24552341F4D1006D624A /* AttributedText.swift */; };
+		6E85A96D2304120C001E2044 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85A96C2304120C001E2044 /* Toolbar.swift */; };
+		6E85A97223043562001E2044 /* StatusBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85A97123043562001E2044 /* StatusBarMenu.swift */; };
+		6E85A97423043CBE001E2044 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E85A97323043CBE001E2044 /* Extensions.swift */; };
+		6E961472235F255000133773 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E961471235F255000133773 /* LinkButton.swift */; };
+		6EB51E0F22EED0F5006DD5EA /* ApplicationStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB51E0E22EED0F5006DD5EA /* ApplicationStatisticsView.swift */; };
+		6EC5D27922E9BE2D009B4372 /* NetFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5D27722E9BE2D009B4372 /* NetFilterModel.swift */; };
+		6EC8E42B22FB1642001C5E85 /* AccessCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC8E42A22FB1642001C5E85 /* AccessCheckView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4005C1762343885400378A28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4005C16F2343885400378A28 /* libs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 408D1640240551F80038891E;
+			remoteInfo = mach;
+		};
+		4005C1782343885400378A28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4005C16F2343885400378A28 /* libs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 460EC4C5801E47D3A4578429;
+			remoteInfo = mcom;
+		};
+		404AC02F23A78148002CD7E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 404AC02823A78148002CD7E3 /* UILib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4019162F23A1039300207D0A;
+			remoteInfo = UILib;
+		};
+		404AC03D23A781D0002CD7E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 404AC02823A78148002CD7E3 /* UILib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4019162E23A1039300207D0A;
+			remoteInfo = UILib;
+		};
+		407F2D3E234729FC00833C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 407F2CF52346477B00833C59;
+			remoteInfo = NetworkFilterManager;
+		};
+		407F2D40234729FC00833C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 407F2D0A23464CCB00833C59;
+			remoteInfo = Extension;
+		};
+		407F2D42234729FC00833C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 407F2D322347246200833C59;
+			remoteInfo = NetworkFilter;
+		};
+		407F2D4423472A0300833C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 407F2D312347246200833C59;
+			remoteInfo = NetworkFilter;
+		};
+		407F2D4F23472F4500833C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 407F2D0923464CCB00833C59;
+			remoteInfo = Extension;
+		};
+		40E97005234346C50085FE64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40E97000234346C50085FE64 /* Mach.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA0A7804223914F4005007BF;
+			remoteInfo = Mach;
+		};
+		40E9700D234346CE0085FE64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40E97000234346C50085FE64 /* Mach.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FA0A7803223914F4005007BF;
+			remoteInfo = Mach;
+		};
+		40FDA76323473B7B00493208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 407F2CF42346477B00833C59;
+			remoteInfo = NetworkFilterManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40FDA7612347394B00493208 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				40FDA7602347394B00493208 /* com.paragon-software.FirewallApp.NetworkFilterExtension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC8E42F22FC6D16001C5E85 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4002E6ED233367A6009FE8CE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4005C16F2343885400378A28 /* libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libs.xcodeproj; path = libs/libs.xcodeproj; sourceTree = SOURCE_ROOT; };
+		402D2BA2231E8CCA00FF3F8B /* SystemExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemExtensions.swift; sourceTree = "<group>"; };
+		403944D92333B3D600A8375E /* FastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastList.swift; sourceTree = "<group>"; };
+		4039CFF72326A3E200170BAD /* ExtensionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLoader.swift; sourceTree = "<group>"; };
+		4039CFFB2326A71700170BAD /* LogWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWindowController.swift; sourceTree = "<group>"; };
+		404AC02823A78148002CD7E3 /* UILib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UILib.xcodeproj; path = ../swiftlibs/UILib/UILib.xcodeproj; sourceTree = "<group>"; };
+		405581352358644500BC9085 /* SelectableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableLabel.swift; sourceTree = "<group>"; };
+		4078086923155BFD00D47105 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkFilterManager.xcodeproj; path = ../NetworkFilterManager/NetworkFilterManager.xcodeproj; sourceTree = "<group>"; };
+		40E916B0232909800070856B /* MonitoredAppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitoredAppModel.swift; sourceTree = "<group>"; };
+		40E97000234346C50085FE64 /* Mach.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mach.xcodeproj; path = ../swiftlibs/Mach/Mach.xcodeproj; sourceTree = "<group>"; };
+		40F1E30A2313DF7D00DA4929 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		6E1AA217230AE97C009C6806 /* DotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsView.swift; sourceTree = "<group>"; };
+		6E1ACC7F230A886D00FADD61 /* ExtensionApprovalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionApprovalView.swift; sourceTree = "<group>"; };
+		6E1ACC84230A88AF00FADD61 /* TourStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourStartView.swift; sourceTree = "<group>"; };
+		6E1ACC86230A895B00FADD61 /* TourAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourAboutView.swift; sourceTree = "<group>"; };
+		6E1ACC88230A897000FADD61 /* TourModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModeView.swift; sourceTree = "<group>"; };
+		6E1ACC8A230A89B500FADD61 /* TourControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourControlsView.swift; sourceTree = "<group>"; };
+		6E1ACC8C230A89CC00FADD61 /* TourDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDoneView.swift; sourceTree = "<group>"; };
+		6E230E9422E5A5B4006508FA /* MonitoredAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoredAppView.swift; sourceTree = "<group>"; };
+		6E3306B922D71C2F00F6A451 /* Firewall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firewall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3306BC22D71C2F00F6A451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E3306BE22D71C2F00F6A451 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6E3306C022D71C3200F6A451 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E3306C322D71C3200F6A451 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6E3306C622D71C3200F6A451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E3306C822D71C3200F6A451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E3306C922D71C3200F6A451 /* FirewallApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirewallApp.entitlements; sourceTree = "<group>"; };
+		6E36EC8E2361A9BE00FD8503 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		6E38BB9022F42DFA009E7431 /* MonitoredAppBriefStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoredAppBriefStats.swift; sourceTree = "<group>"; };
+		6E458D32230D78BE0009CAC7 /* TourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourView.swift; sourceTree = "<group>"; };
+		6E458D3B230D8D060009CAC7 /* TourSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourSetupView.swift; sourceTree = "<group>"; };
+		6E5322DB2310121D00130268 /* TourModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModeSelectionView.swift; sourceTree = "<group>"; };
+		6E5322E02313DA7400130268 /* TourSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourSectionHeader.swift; sourceTree = "<group>"; };
+		6E5C24552341F4D1006D624A /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		6E85A96C2304120C001E2044 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
+		6E85A97123043562001E2044 /* StatusBarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarMenu.swift; sourceTree = "<group>"; };
+		6E85A97323043CBE001E2044 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6E961471235F255000133773 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
+		6EB51E0E22EED0F5006DD5EA /* ApplicationStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStatisticsView.swift; sourceTree = "<group>"; };
+		6EC5D27722E9BE2D009B4372 /* NetFilterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetFilterModel.swift; sourceTree = "<group>"; };
+		6EC8E42A22FB1642001C5E85 /* AccessCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCheckView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E3306B622D71C2F00F6A451 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404AC03923A781C6002CD7E3 /* libUILib.a in Frameworks */,
+				40FDA76223473B7000493208 /* libNetworkFilterManager.a in Frameworks */,
+				407F2D4623472EDF00833C59 /* libNetworkFilter.a in Frameworks */,
+				4005C17C2343886900378A28 /* libmcom.a in Frameworks */,
+				40BA6CB0240554A8002CFDEC /* libmach-cpp.a in Frameworks */,
+				40E97011234349300085FE64 /* libMach.a in Frameworks */,
+				40FDA755234736C500493208 /* NetworkExtension.framework in Frameworks */,
+				4078086A23155BFD00D47105 /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4005C1702343885400378A28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4005C1772343885400378A28 /* libmach-cpp.a */,
+				4005C1792343885400378A28 /* libmcom.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		404AC02923A78148002CD7E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				404AC03023A78148002CD7E3 /* libUILib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		407F2CDE2346454300833C59 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */,
+				4005C16F2343885400378A28 /* libs.xcodeproj */,
+				40E97000234346C50085FE64 /* Mach.xcodeproj */,
+				404AC02823A78148002CD7E3 /* UILib.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		407F2CEF234645A300833C59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				407F2D3F234729FC00833C59 /* libNetworkFilterManager.a */,
+				407F2D41234729FC00833C59 /* com.paragon-software.FirewallApp.NetworkFilterExtension.systemextension */,
+				407F2D43234729FC00833C59 /* libNetworkFilter.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40E97001234346C50085FE64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40E97006234346C50085FE64 /* libMach.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E26ADB2233C9FD100DE2DA2 /* ProductTour */ = {
+			isa = PBXGroup;
+			children = (
+				6E1ACC84230A88AF00FADD61 /* TourStartView.swift */,
+				6E1ACC86230A895B00FADD61 /* TourAboutView.swift */,
+				6E1ACC88230A897000FADD61 /* TourModeView.swift */,
+				6E1ACC8C230A89CC00FADD61 /* TourDoneView.swift */,
+				6E1ACC8A230A89B500FADD61 /* TourControlsView.swift */,
+				6E1AA217230AE97C009C6806 /* DotsView.swift */,
+				6E458D3B230D8D060009CAC7 /* TourSetupView.swift */,
+				6E458D32230D78BE0009CAC7 /* TourView.swift */,
+				6E5322DB2310121D00130268 /* TourModeSelectionView.swift */,
+				6E5322E02313DA7400130268 /* TourSectionHeader.swift */,
+			);
+			path = ProductTour;
+			sourceTree = "<group>";
+		};
+		6E3306B022D71C2F00F6A451 = {
+			isa = PBXGroup;
+			children = (
+				6E3306BB22D71C2F00F6A451 /* FirewallApp */,
+				6E3306BA22D71C2F00F6A451 /* Products */,
+				6EC8E42C22FC6D16001C5E85 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6E3306BA22D71C2F00F6A451 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E3306B922D71C2F00F6A451 /* Firewall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E3306BB22D71C2F00F6A451 /* FirewallApp */ = {
+			isa = PBXGroup;
+			children = (
+				4002E6ED233367A6009FE8CE /* Config.xcconfig */,
+				6E3306BC22D71C2F00F6A451 /* AppDelegate.swift */,
+				4039CFF72326A3E200170BAD /* ExtensionLoader.swift */,
+				4039CFFB2326A71700170BAD /* LogWindowController.swift */,
+				402D2BA2231E8CCA00FF3F8B /* SystemExtensions.swift */,
+				6E85A96C2304120C001E2044 /* Toolbar.swift */,
+				6E85A97123043562001E2044 /* StatusBarMenu.swift */,
+				6E85A97323043CBE001E2044 /* Extensions.swift */,
+				6EB51E0D22EECFC1006DD5EA /* Views */,
+				6EDE8DDB22E0804500F4D5F5 /* Models */,
+				407F2CDE2346454300833C59 /* Dependencies */,
+				6E3306C022D71C3200F6A451 /* Assets.xcassets */,
+				6E3306C522D71C3200F6A451 /* Main.storyboard */,
+				6E3306C822D71C3200F6A451 /* Info.plist */,
+				6E3306C922D71C3200F6A451 /* FirewallApp.entitlements */,
+				6E3306C222D71C3200F6A451 /* Preview Content */,
+			);
+			indentWidth = 2;
+			path = FirewallApp;
+			sourceTree = "<group>";
+		};
+		6E3306C222D71C3200F6A451 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6E3306C322D71C3200F6A451 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6EB51E0D22EECFC1006DD5EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E26ADB2233C9FD100DE2DA2 /* ProductTour */,
+				6E5C24552341F4D1006D624A /* AttributedText.swift */,
+				6E3306BE22D71C2F00F6A451 /* ContentView.swift */,
+				6E230E9422E5A5B4006508FA /* MonitoredAppView.swift */,
+				6EB51E0E22EED0F5006DD5EA /* ApplicationStatisticsView.swift */,
+				6E38BB9022F42DFA009E7431 /* MonitoredAppBriefStats.swift */,
+				6EC8E42A22FB1642001C5E85 /* AccessCheckView.swift */,
+				6E1ACC7F230A886D00FADD61 /* ExtensionApprovalView.swift */,
+				403944D92333B3D600A8375E /* FastList.swift */,
+				405581352358644500BC9085 /* SelectableLabel.swift */,
+				6E961471235F255000133773 /* LinkButton.swift */,
+				6E36EC8E2361A9BE00FD8503 /* IconView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6EC8E42C22FC6D16001C5E85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4078086923155BFD00D47105 /* libc++.tbd */,
+				40F1E30A2313DF7D00DA4929 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EDE8DDB22E0804500F4D5F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40E916B0232909800070856B /* MonitoredAppModel.swift */,
+				6EC5D27722E9BE2D009B4372 /* NetFilterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E3306B822D71C2F00F6A451 /* Firewall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E3306CC22D71C3200F6A451 /* Build configuration list for PBXNativeTarget "Firewall" */;
+			buildPhases = (
+				6E3306B522D71C2F00F6A451 /* Sources */,
+				6E3306B622D71C2F00F6A451 /* Frameworks */,
+				6E3306B722D71C2F00F6A451 /* Resources */,
+				6EC8E42F22FC6D16001C5E85 /* Embed Frameworks */,
+				40FDA7612347394B00493208 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				404AC03E23A781D0002CD7E3 /* PBXTargetDependency */,
+				40FDA76423473B7B00493208 /* PBXTargetDependency */,
+				407F2D5023472F4500833C59 /* PBXTargetDependency */,
+				407F2D4523472A0300833C59 /* PBXTargetDependency */,
+				40E9700E234346CE0085FE64 /* PBXTargetDependency */,
+			);
+			name = Firewall;
+			productName = FirewallApp;
+			productReference = 6E3306B922D71C2F00F6A451 /* Firewall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E3306B122D71C2F00F6A451 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = none;
+				TargetAttributes = {
+					6E3306B822D71C2F00F6A451 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 6E3306B422D71C2F00F6A451 /* Build configuration list for PBXProject "FirewallApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E3306B022D71C2F00F6A451;
+			productRefGroup = 6E3306BA22D71C2F00F6A451 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4005C1702343885400378A28 /* Products */;
+					ProjectRef = 4005C16F2343885400378A28 /* libs.xcodeproj */;
+				},
+				{
+					ProductGroup = 40E97001234346C50085FE64 /* Products */;
+					ProjectRef = 40E97000234346C50085FE64 /* Mach.xcodeproj */;
+				},
+				{
+					ProductGroup = 407F2CEF234645A300833C59 /* Products */;
+					ProjectRef = 407F2CEE234645A300833C59 /* NetworkFilterManager.xcodeproj */;
+				},
+				{
+					ProductGroup = 404AC02923A78148002CD7E3 /* Products */;
+					ProjectRef = 404AC02823A78148002CD7E3 /* UILib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6E3306B822D71C2F00F6A451 /* Firewall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4005C1772343885400378A28 /* libmach-cpp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libmach-cpp.a";
+			remoteRef = 4005C1762343885400378A28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4005C1792343885400378A28 /* libmcom.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmcom.a;
+			remoteRef = 4005C1782343885400378A28 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		404AC03023A78148002CD7E3 /* libUILib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUILib.a;
+			remoteRef = 404AC02F23A78148002CD7E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		407F2D3F234729FC00833C59 /* libNetworkFilterManager.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNetworkFilterManager.a;
+			remoteRef = 407F2D3E234729FC00833C59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		407F2D41234729FC00833C59 /* com.paragon-software.FirewallApp.NetworkFilterExtension.systemextension */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.system-extension";
+			path = "com.paragon-software.FirewallApp.NetworkFilterExtension.systemextension";
+			remoteRef = 407F2D40234729FC00833C59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		407F2D43234729FC00833C59 /* libNetworkFilter.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNetworkFilter.a;
+			remoteRef = 407F2D42234729FC00833C59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40E97006234346C50085FE64 /* libMach.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMach.a;
+			remoteRef = 40E97005234346C50085FE64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E3306B722D71C2F00F6A451 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E3306C722D71C3200F6A451 /* Main.storyboard in Resources */,
+				6E3306C422D71C3200F6A451 /* Preview Assets.xcassets in Resources */,
+				6E3306C122D71C3200F6A451 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E3306B522D71C2F00F6A451 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E85A97223043562001E2044 /* StatusBarMenu.swift in Sources */,
+				6E85A96D2304120C001E2044 /* Toolbar.swift in Sources */,
+				6E1ACC80230A886D00FADD61 /* ExtensionApprovalView.swift in Sources */,
+				6E3306BF22D71C2F00F6A451 /* ContentView.swift in Sources */,
+				6E38BB9122F42DFB009E7431 /* MonitoredAppBriefStats.swift in Sources */,
+				6EC8E42B22FB1642001C5E85 /* AccessCheckView.swift in Sources */,
+				402D2BA5231E8CCA00FF3F8B /* SystemExtensions.swift in Sources */,
+				6E3306BD22D71C2F00F6A451 /* AppDelegate.swift in Sources */,
+				4039CFF82326A3E200170BAD /* ExtensionLoader.swift in Sources */,
+				40E916B3232909800070856B /* MonitoredAppModel.swift in Sources */,
+				405581362358644500BC9085 /* SelectableLabel.swift in Sources */,
+				6EB51E0F22EED0F5006DD5EA /* ApplicationStatisticsView.swift in Sources */,
+				6E5C24562341F4D1006D624A /* AttributedText.swift in Sources */,
+				6E36EC8F2361A9BE00FD8503 /* IconView.swift in Sources */,
+				4039CFFC2326A71700170BAD /* LogWindowController.swift in Sources */,
+				6E1ACC8D230A89CC00FADD61 /* TourDoneView.swift in Sources */,
+				6E458D33230D78BE0009CAC7 /* TourView.swift in Sources */,
+				6E458D3C230D8D060009CAC7 /* TourSetupView.swift in Sources */,
+				403944DA2333B3D600A8375E /* FastList.swift in Sources */,
+				6E1ACC85230A88AF00FADD61 /* TourStartView.swift in Sources */,
+				6EC5D27922E9BE2D009B4372 /* NetFilterModel.swift in Sources */,
+				6E85A97423043CBE001E2044 /* Extensions.swift in Sources */,
+				6E5322E12313DA7400130268 /* TourSectionHeader.swift in Sources */,
+				6E1ACC8B230A89B500FADD61 /* TourControlsView.swift in Sources */,
+				6E1ACC87230A895B00FADD61 /* TourAboutView.swift in Sources */,
+				6E1ACC89230A897000FADD61 /* TourModeView.swift in Sources */,
+				6E230E9522E5A5B4006508FA /* MonitoredAppView.swift in Sources */,
+				6E961472235F255000133773 /* LinkButton.swift in Sources */,
+				6E5322DC2310121D00130268 /* TourModeSelectionView.swift in Sources */,
+				6E1AA218230AE97C009C6806 /* DotsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		404AC03E23A781D0002CD7E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UILib;
+			targetProxy = 404AC03D23A781D0002CD7E3 /* PBXContainerItemProxy */;
+		};
+		407F2D4523472A0300833C59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkFilter;
+			targetProxy = 407F2D4423472A0300833C59 /* PBXContainerItemProxy */;
+		};
+		407F2D5023472F4500833C59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Extension;
+			targetProxy = 407F2D4F23472F4500833C59 /* PBXContainerItemProxy */;
+		};
+		40E9700E234346CE0085FE64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mach;
+			targetProxy = 40E9700D234346CE0085FE64 /* PBXContainerItemProxy */;
+		};
+		40FDA76423473B7B00493208 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NetworkFilterManager;
+			targetProxy = 40FDA76323473B7B00493208 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E3306C522D71C3200F6A451 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E3306C622D71C3200F6A451 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E3306CA22D71C3200F6A451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4002E6ED233367A6009FE8CE /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/mcom";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E3306CB22D71C3200F6A451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4002E6ED233367A6009FE8CE /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/mcom";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6E3306CD22D71C3200F6A451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirewallApp/FirewallApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "FirewallApp/Preview\\ Content";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FirewallApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(ORG_IDENTIFIER).FirewallApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6E3306CE22D71C3200F6A451 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirewallApp/FirewallApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "FirewallApp/Preview\\ Content";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FirewallApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(ORG_IDENTIFIER).FirewallApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E3306B422D71C2F00F6A451 /* Build configuration list for PBXProject "FirewallApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E3306CA22D71C3200F6A451 /* Debug */,
+				6E3306CB22D71C3200F6A451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E3306CC22D71C3200F6A451 /* Build configuration list for PBXNativeTarget "Firewall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E3306CD22D71C3200F6A451 /* Debug */,
+				6E3306CE22D71C3200F6A451 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E3306B122D71C2F00F6A451 /* Project object */;
+}

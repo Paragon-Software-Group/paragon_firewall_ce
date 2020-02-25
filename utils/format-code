@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+#
+# Paragon Firewall Community Edition
+# Copyright (C) 2019-2020  Paragon Software GmbH
+#
+# This file is part of Paragon Firewall Community Edition.
+#
+# Paragon Firewall Community Edition is free software: you can
+# redistribute it and/or modify it under the terms of the GNU General
+# Public License as published by the Free Software Foundation, either
+# version 3 of the License, or (at your option) any later version.
+#
+# Paragon Firewall Community Edition is distributed in the hope that it
+# will be useful, but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+# the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Paragon Firewall Community Edition. If not, see
+#   <https://www.gnu.org/licenses/>.
+
+require_relative 'vcs'
+
+class String
+  def bold
+    "\e[1m#{self}\e[22m"
+  end
+end
+
+def clang_format_file?(f)
+  %w(.cpp .hpp .cc .hh .c .h .mm .m).include?(f.extname)
+end
+
+files = ARGV.empty? ? VCS.list_wc_files(Pathname.new('')) : ARGV.map {|a| Pathname.new(a)}
+
+if File.file?('.clang-format')
+  clang_format_files = files.select {|f| clang_format_file?(f)}
+
+  unless clang_format_files.empty?
+    puts 'Will run ' + 'clang-format'.bold +
+      " for #{clang_format_files.count} files"
+
+    system('clang-format', '-i', *clang_format_files.map(&:to_s))
+  end
+end
+
+puts 'Will run ' + 'license-insert'.bold
+
+system((Pathname.new(__FILE__).dirname + 'license-insert').realpath.to_s,
+       *files.map(&:to_s))

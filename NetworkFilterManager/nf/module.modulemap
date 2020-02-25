@@ -1,0 +1,4 @@
+module nf [system][extern_c] {
+  header "include/nf/nf.h"
+  export *
+}

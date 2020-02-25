@@ -1,0 +1,2 @@
+cmake 'libs/mcom'
+cmake 'libs/mach'

@@ -1,0 +1,160 @@
+#!/usr/bin/ruby -w
+#
+# Paragon Firewall Community Edition
+# Copyright (C) 2019-2020  Paragon Software GmbH
+#
+# This file is part of Paragon Firewall Community Edition.
+#
+# Paragon Firewall Community Edition is free software: you can
+# redistribute it and/or modify it under the terms of the GNU General
+# Public License as published by the Free Software Foundation, either
+# version 3 of the License, or (at your option) any later version.
+#
+# Paragon Firewall Community Edition is distributed in the hope that it
+# will be useful, but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+# the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Paragon Firewall Community Edition. If not, see
+#   <https://www.gnu.org/licenses/>.
+#
+# Created by Alexey Antipov on 22/05/2018.
+#
+
+files = ARGV
+
+# Get list of files, return array: [[path, type, prefix],...]
+def filter_files(files)
+  files.map do |f|
+    type = file_mime_type(f)
+    prefix = type ? prefix_for_type(type) : nil
+    prefix ? [f, type, prefix] : nil
+  end
+end
+
+# Input: [[path, type, prefix], ...]
+# Output: [path, type, patched]
+def patch_files(files)
+  files.map do |path, type, prefix|
+    patched = patch_file(path, prefix)
+    patched ? [path, type, patched] : nil
+  end
+end
+
+def patch_file(path, prefix)
+  contents = File.read(path)
+  lines = contents.split("\n")
+  header_range, interpret, creator = grep_creator(lines, prefix)
+  lines[header_range] = make_header(prefix, interpret, creator)
+  # Add a newline if there's none
+  # If there's more than two newlines, than leave just two
+  patched = lines.join("\n").sub(/\n*\z/) { $&.length < 2 ? "\n" : "\n\n" }
+  patched != contents ? patched : nil
+end
+
+def file_mime_type(path)
+  case File.extname(path)
+  when '.h', '.hh', '.hpp', '.c', '.cc', '.cpp' then 'text/x-c++'
+  when '.m', '.mm' then 'text/x-objective-c'
+  when '.swift' then 'text/x-swift'
+  when '.sh' then 'text/x-shellscript'
+  when '.rb' then 'text/x-ruby'
+  when '.xcconfig' then 'text/x-xcconfig'
+  else guess_file_mime_type(path)
+  end
+end
+
+def prefix_for_type(type)
+  case type
+  when 'text/x-c++', 'text/x-swift', 'text/x-objective-c', 'text/x-xcconfig'
+    then '//'
+  when 'text/x-ruby', 'text/x-shellscript'
+    then '#'
+  else nil
+  end
+end
+
+def guess_file_mime_type(path)
+  r, w = IO.pipe
+  system('/usr/bin/file', '--mime-type', '--brief', path, {out: w})
+  w.close
+  r.read.chomp
+end
+
+def grep_creator(lines, prefix)
+  interpret = lines.first.start_with?("#!") || lines.first.start_with?("// swift-tools-version:")
+  lines = lines[1...-1] if interpret
+  header_start = interpret ? 1 : 0
+  header_end = header_start
+  creator = nil
+  lines.each do |line|
+    header_end += 1 if line.empty?
+    break unless line.start_with?(prefix)
+    m = line.match(/^#{prefix}\s*(Created by .*? \d+(.)\d+(\2)\d+\.)$/)
+    creator = m[1] if m
+    header_end += 1
+  end
+  return (header_start...header_end), interpret, creator
+end
+
+def make_header(prefix, interpret, creator)
+  header = interpret ? "\n" : ''
+  header += <<-HEADER_LICENSE
+Paragon Firewall Community Edition
+Copyright (C) 2019-2020  Paragon Software GmbH
+
+This file is part of Paragon Firewall Community Edition.
+
+Paragon Firewall Community Edition is free software: you can
+redistribute it and/or modify it under the terms of the GNU General
+Public License as published by the Free Software Foundation, either
+version 3 of the License, or (at your option) any later version.
+
+Paragon Firewall Community Edition is distributed in the hope that it
+will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Paragon Firewall Community Edition. If not, see
+  <https://www.gnu.org/licenses/>.
+HEADER_LICENSE
+  header = header.split("\n").map {|l| "#{prefix} #{l}".rstrip}.join("\n")
+  header += "\n#{prefix}\n#{prefix} #{creator}\n#{prefix}" if creator
+  header += "\n"
+  header
+end
+
+def prompt_patch(files)
+  $stderr.puts 'Will patch:'
+  files.each do |path, type, _|
+    $stderr.puts "  #{path}: #{type}"
+  end
+  loop do
+    $stderr.print 'Continue? [y/N]: '
+    case $stdin.gets.chomp
+    when 'y', 'Y' then return
+    when 'n', 'N', ''
+      $stderr.puts '- Aborting.'
+      exit 1
+    end
+  end
+end
+
+to_patch = filter_files(files).compact
+patched = patch_files(to_patch).compact
+
+if patched.empty?
+  $stderr.puts '- Nothing to patch. Will exit.'
+  exit 0
+end
+
+prompt_patch(patched) if $stdin.tty?
+
+patched.each do |path, _, contents|
+  tmp_path = File.dirname(path) + '/.' + File.basename(path) + '.license-insert.tmp'
+  mode = File.stat(path).mode
+  File.open(tmp_path, 'w', mode) {|tmp| tmp.write(contents)}
+  File.rename(tmp_path, path)
+end

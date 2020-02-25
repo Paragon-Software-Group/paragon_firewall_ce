@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1130"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "NO">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6E3306B822D71C2F00F6A451"
+               BuildableName = "Firewall.app"
+               BlueprintName = "Firewall"
+               ReferencedContainer = "container:FirewallApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "src=$BUILT_PRODUCTS_DIR/$WRAPPER_NAME&#10;dst=/Applications/$PRODUCT_NAME-Debug$WRAPPER_SUFFIX&#10;rm -rf &quot;$dst&quot;&#10;ditto &quot;$src&quot; &quot;$dst&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "6E3306B822D71C2F00F6A451"
+                     BuildableName = "Firewall.app"
+                     BlueprintName = "Firewall"
+                     ReferencedContainer = "container:FirewallApp.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.paragon-software.FirewallApp"
+         FilePath = "/Applications/Firewall-Debug.app">
+      </PathRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6E3306B822D71C2F00F6A451"
+            BuildableName = "Firewall.app"
+            BlueprintName = "Firewall"
+            ReferencedContainer = "container:FirewallApp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6E3306B822D71C2F00F6A451"
+            BuildableName = "Firewall.app"
+            BlueprintName = "Firewall"
+            ReferencedContainer = "container:FirewallApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "set -o errexit&#10;&#10;[[ -n &quot;$TEAMCITY_VERSION&quot; ]] || exit 0&#10;&#10;new_archive_path=&quot;$TMPDIR/${XCARCHIVE_NAME}.xcarchive&quot;&#10;ditto &quot;$ARCHIVE_PATH&quot; &quot;$new_archive_path&quot;&#10;zip_path=${new_archive_path}.zip&#10;ditto -c -k --keepParent &quot;$new_archive_path&quot; &quot;$zip_path&quot;&#10;echo &quot;##teamcity[publishArtifacts &apos;$zip_path&apos;]&quot;&#10;"
+               shellToInvoke = "/bin/bash">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "6E3306B822D71C2F00F6A451"
+                     BuildableName = "Firewall.app"
+                     BlueprintName = "Firewall"
+                     ReferencedContainer = "container:FirewallApp.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+   </ArchiveAction>
+</Scheme>
